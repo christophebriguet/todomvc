@@ -13,4 +13,10 @@ class TasksController extends BaseController {
     return Redirect::route('tasks-create');
 	}  
 
+	public function index()
+	{
+      $tasks = Task::all();
+    return View::make('tasks.index')->with('tasks', $tasks);
+	}    
+
 }

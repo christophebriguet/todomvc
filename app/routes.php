@@ -59,7 +59,4 @@ Route::get('user3/{id}/{name}', function($id, $name)
 Route::get('tasks/create', array ('as' => 'tasks-create', 'uses' => 'TasksController@create'));
 Route::post('tasks/store', array ('as' => 'tasks-store', 'uses' => 'TasksController@store'));
 
-Route::get('tasks/index', function()
-{
-  return View::make('tasks.index');
-});
+Route::get('tasks/index', array ('as' => 'tasks-index', 'uses' => 'TasksController@index'));
