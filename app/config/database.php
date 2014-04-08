@@ -65,10 +65,10 @@ return array(
 
 		'pgsql' => array(
 			'driver'   => 'pgsql',
-			'host'     => 'localhost',
-			'database' => 'todomvc_dev',
-			'username' => 'action',
-			'password' => '',
+			'host'     => 'ec2-54-243-50-213.compute-1.amazonaws.com',
+			'database' => 'dd9lei8bhcqpso',
+			'username' => 'grodzbpxtdoeek',
+			'password' => '82btJjYcS33zDjdZGCoVYPBkgR',
 			'charset'  => 'utf8',
 			'prefix'   => '',
 			'schema'   => 'public',
