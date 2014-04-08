@@ -61,6 +61,5 @@ Route::post('tasks/store', array ('as' => 'tasks-store', 'uses' => 'TasksControl
 
 Route::get('tasks/index', function()
 {
-   return 'OK'; 
-  //return View::make('tasks.index');
+  return View::make('tasks.index');
 });

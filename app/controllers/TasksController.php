@@ -10,7 +10,7 @@ class TasksController extends BaseController {
 	public function store()
 	{
       Task::create(Input::all());
-    return Redirect::route('tasks/create');
+    return Redirect::route('tasks-create');
 	}  
 
 }
