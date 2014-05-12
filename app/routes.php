@@ -56,7 +56,13 @@ Route::get('user3/{id}/{name}', function($id, $name)
 })
 ->where(array('id' => '[0-9]+', 'name' => '[a-z]+'));
 
+Route::get('test5/api', function()
+{
+    return Response::json(array('name' => 'Steve', 'state' => 'CA'));
+});  
+
 Route::get('tasks/create', array ('as' => 'tasks-create', 'uses' => 'TasksController@create'));
 Route::post('tasks/store', array ('as' => 'tasks-store', 'uses' => 'TasksController@store'));
-
 Route::get('tasks/index', array ('as' => 'tasks-index', 'uses' => 'TasksController@index'));
+
+Route::delete('tasks/destroy/{id}', array ('as' => 'tasks-destroy', 'uses' => 'TasksController@destroy')->with('id', '$id'));
