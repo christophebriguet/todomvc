@@ -22,11 +22,10 @@ class TasksController extends BaseController {
     return View::make('tasks.index')->with('tasks', $tasks);
 	} 
   
- public function destroy($id)
+  public function destroy($id)
 	{
    $task = Task::findOrFail($id);
    $task->delete();
    return Redirect::action('TasksController@index');
 	}     
-  
 }

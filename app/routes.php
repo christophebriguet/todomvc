@@ -65,4 +65,4 @@ Route::get('tasks/create', array ('as' => 'tasks-create', 'uses' => 'TasksContro
 Route::post('tasks/store', array ('as' => 'tasks-store', 'uses' => 'TasksController@store'));
 Route::get('tasks/index', array ('as' => 'tasks-index', 'uses' => 'TasksController@index'));
 
-Route::delete('tasks/destroy/{id}', array ('as' => 'tasks-destroy', 'uses' => 'TasksController@destroy')->with('id', '$id'));
+Route::delete('tasks/destroy/{id}', array ('as' => 'tasks-destroy', 'uses' => 'TasksController@destroy'));
